@@ -34,6 +34,11 @@
 14. [CSS Transforms, Transitions, and Animations](https://github.com/ikyle53/ikyle53.github.io/blob/main/Reading_Notes/reading-notes.md#14-css-transforms-transitions-and-animations)
 15. What Google Learned about Teams
 
+# **301 Reading Notes**
+
+## Table of contents  
+
+
 # Growth Mindset
 
 The growth mindset is a way of thinking that replaces the lazy ways of the brain. Generally the mind doesn't want to do something that it doesn't feel like doing. However, in the growth mindset we learn to suffer well instead of suffering painfully. The obstacles we face can be overcome by embracing them instead of avoiding them (_laziness_). We feel better for doing hard work instead of feeling remorse and regret for not doing the work at all.
@@ -1588,3 +1593,49 @@ let myFunction = (
 ) => 1; 
 //No syntax errors from any of these
 ```
+# Classes
+
+Classes function similar to functions but have some better functionality. Prototypes can be built in and it's easier to read.
+
+```js
+class Animal {  
+  constructor(name, legs) {  //Constructor function
+    this.name = name;
+    this.legs = legs;
+  }
+
+  walk() { // Built in method prototype
+    this.isWalking = true;
+  }
+
+  eat() { //Built in method prototype
+    this.isEating = true;
+  }
+}
+
+new Animal('BeepBoop', 4); //Creates an object with the string and #
+BeepBoop.walk(); // Evaluates as true
+BeepBoop.eat(); // Evaluates as true
+```
+
+We're also able to `extend` a new class to the parent class so that it takes on the properties of the parent and also any new properties defined in the new class.
+
+```js
+class Dog extends Animal {
+  constructor(name, legs, furType) {
+    super(name, legs); // Takes the parameters of Animal
+    this.furType = furType;
+  }
+
+  speak() {
+    console.log('Werf!');
+  }
+}
+
+new Dog('Peanut', 4, 'long hair'); //Makes the object of Dog into our little Peanut dog
+Peanut.walk(); // Takes the prototype from Animal's prototype walk
+Peanut.eat(); // Takes the prototype from Animal's prototype eat
+Peanut.speak(); // Uses its own prototype in conjunction with Animal's
+```
+
+# 301 Notes begins
