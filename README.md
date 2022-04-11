@@ -38,7 +38,7 @@
 
 ## Table of contents
 
-1. React & Components
+1. [React & Components](https://github.com/ikyle53/rn#react-and-components)
 
 # Growth Mindset
 
