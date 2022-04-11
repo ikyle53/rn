@@ -36,8 +36,9 @@
 
 # **301 Reading Notes**
 
-## Table of contents  
+## Table of contents
 
+1. React & Components
 
 # Growth Mindset
 
@@ -1638,4 +1639,44 @@ Peanut.eat(); // Takes the prototype from Animal's prototype eat
 Peanut.speak(); // Uses its own prototype in conjunction with Animal's
 ```
 
-# 301 Notes begins
+# React and Components
+
+## Components
+
+> What is a “component”?
+
+Simply put, component are flexible, reusable, and independent pieces of code which also serve as a user interface. These components are also able to work with other components and even third party components! A components object-oriented view relates to how classes cooperate and function to execute a process to solve a specific problem domain. Within the conventional view, components are written with processing logic to integrate data structures to invokes the components and allows data to be passed to it. Lastly, the process-related view deals with existing components that are maintained within a library. The components are called from the library and the expected architecture is built.
+
+> What are the characteristics of a component?
+
+1. Reusability- Can be reused in multiple situations  and applications.
+2. Replaceable - You can switch one component for another.
+3. Not context specific - Can be used in different environments.
+4. Extensible - Extensions can be built on top of existing components for further functionality.
+5. Encapsulated - When called the component doesn’t expose details within the component
+6. Independent - Made with minimal dependencies on other components.
+
+
+> What are the advantages of using component-based architecture?
+
+1. Ease of deployment - New and better components come out in time and they’re easier to implement and have less impact on other components.
+2. Reduced cost - Third-party components takes the cost out of building your own.
+Ease of development - The interfaces are well known and provide defined functionality.
+3. Reusable - The components can be used widely and not in one app only
+4. Modification of technical complexity - Components have their own container which houses the code. Complexity lies within its own container.
+5. Reliability - Since components are independent this causes the system to be more reliable.
+6. System maintenance - Easy to change or update the individual components without rewriting the system.
+7. Independent - Components do all the work with flexibility and are able to work with other components.
+
+## Props
+> What is “props” short for?
+
+**Properties**. These are passing the property details from one component to another.
+
+> How are props used in React?
+
+Props are used to change the properties of components. For example, you can change the text content of an html element using a variable and use the prop as a property of the html element to change its text to whatever text was assigned in the variable.
+
+> What is the flow of props?
+
+From parent to child to grandchild and so on. It’s uni-directional and cannot go back up the flow.
