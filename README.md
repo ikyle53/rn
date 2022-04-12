@@ -39,6 +39,7 @@
 ## Table of contents
 
 1. [React & Components](https://github.com/ikyle53/rn#react-and-components)
+2. State and Props
 
 # Growth Mindset
 
@@ -1680,3 +1681,41 @@ Props are used to change the properties of components. For example, you can chan
 > What is the flow of props?
 
 From parent to child to grandchild and so on. It’s uni-directional and cannot go back up the flow.
+
+# State and Props
+
+> Based off the diagram, what happens first, the ‘render’ or the ‘componentDidMount’?
+
+According to the diagram the ‘render’ happens first  before ‘componentDidMount’. Render is examining the state and props of the component during constructing before it’s actually mounted. ‘componentDidMount’ happens immediately after the component is mounted.
+
+> What is the very first thing to happen in the lifecycle of React?
+
+The instance of a component is called and the mounting phase begins. The constructor begins constructing the component and renders the state and props.
+
+> Put the following things in the order that they happen: componentDidMount, render, constructor, componentWillUnmount, React Updates
+
+1. Constructor
+2. React Updates
+3. render
+4. componentDidMount
+5. componentWillUnmount
+
+> What does componentDidMount do?
+
+componentDidMount initializes the document object model to load data from a remote endpoint. In the case of the article’s perspective it’s loading videos from a YouTube API (remote endpoint).
+
+> What types of things can you pass in the props?
+
+We pass data (properties) from one component to another, like a parent component to a child component. It can be strings, numbers, booleans, etc.
+
+> What is the big difference between props and state?
+
+Props is data that is passed into components. It’s happening outside the component. State is something inside a component that changes from outside influence.
+
+> When do we re-render our application?
+
+Every time a state is changed is when we re-render the application.
+
+> What are some examples of things that we could store in state?
+
+We could store counters, lists, time, dates, current state of an element.
