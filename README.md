@@ -1695,9 +1695,9 @@ The instance of a component is called and the mounting phase begins. The constru
 > Put the following things in the order that they happen: componentDidMount, render, constructor, componentWillUnmount, React Updates
 
 1. Constructor
-2. React Updates
-3. render
-4. componentDidMount
+2. render
+3. componentDidMount
+4. React Updates
 5. componentWillUnmount
 
 > What does componentDidMount do?
