@@ -40,6 +40,7 @@
 
 1. [React & Components](https://github.com/ikyle53/rn#react-and-components)
 2. State and Props
+3. Passing functions as props
 
 # Growth Mindset
 
@@ -89,6 +90,7 @@ HTML makes use of its tags
 Here's the code in use using a heading size 4:
 
 > #### GitHub Heading using '####'  
+
 > <h4>HTML Heading using h4</h4>
 ***  
 
@@ -172,14 +174,17 @@ needed and create as many new versions as you want.
 #### Local Version Control
 
 > The version control is done locally via your own hard drive.
+
 #### Centralized Version Control
 
 > All versions are stored on one server. Programmers have access to the versions that they can edit at the same time in a collaborative environment.
 > Each programmer has different permissions depending on their position.
+
 #### Distributed Version Control
 
 > In this version control the versions are distributed to all the developers. Each change that a developer makes also gets distributed to everyone else in
 > what's called a 'push'. This push gets sent to the main folder on the server and gets distributed from there. You can also make a 'pull' that requests
+
 ### Pushing and Pulling in the terminal
 
 #### Push
@@ -284,10 +289,12 @@ Css stands for cascading style sheets. It basically describes how elements on a 
 
 > ![inlineStyling](../images/inline.png)
 > Inline styling is within the element itself. The styles are apart of the html tag.
+
 2. Internal styling
 
 > ![internalStyling](../images/internal.png)
 > Internal styling is whithin the ```<style>``` tag. It's also nested insided the ```head``` tag.
+
 3. External styling
 
 > ![externalStyling](../images/external.png)
@@ -379,6 +386,7 @@ As ```i``` increases its value by 1 each loop it'll eventually become 5. Once it
 ## While loop
 
 ```while``` loops like to run forever if you let them. This is really bad! Here's what a while loops looks like:
+
 ```
 var i = 1;
 
@@ -387,6 +395,7 @@ while (i < 5) {
   i++;
 }
 ```
+
 1. We start off declaring what ```i``` is so we have a place to start with our counter. i = 1.
 2. ```while (i < 5)``` This is how many times it will loop. i is equal to 1 right now so it'll loop 3 more times.
 3. ```document.write(i);``` This is the code being ran as a result of the ```i < 5``` continuing to be true. It writes to the page what i currently is.
@@ -394,7 +403,9 @@ while (i < 5) {
 The result will be 1234 when it's done looping.
 <!--201 READING NOTES------------------------------------------------->
 # **201 Reading Notes**
+
 ## Table of contents
+
 1. Introductory HTML and Javascript
 2. HTML Text, CSS Intro, Basic Javascript
 3. HTML Lists, CSS Boxes, JS Control Flow
@@ -410,12 +421,16 @@ The result will be 1234 when it's done looping.
 13. Local Storage
 14. CSS Transforms, Transitions, and Animations
 15. What Google Learned about Teams
+
 # 1. Introductory HTML and Javascript
+
 ### The basics
+
 **HTML** - HTML stands for hypertext markup language
 > Hypertext means text that is displayed on your computer screen that references to other text. We commonly call this a hyperlink. As you may know clicking on a hyperlink takes you to a new website, another part of the current website, or to another page on the same website. It's a bunch of references.
 The markup language simply refers to a computer language that uses tags like ```<html>``` or ```<p>```. HTML is most notable used for the structure or skeleton of the web page.
 HTML code will look like this:
+
 ```
 <!DOCTYPE=html> <!--This code tells the computer it's an html file>
 <html> <!--This is the start of our html file>
@@ -427,10 +442,14 @@ HTML code will look like this:
 </body>
 </html>
 ```
+
 #### Targeting your html code
+
 Going deeper into html we use ```id``` and ```class``` attributes to target our code for css and javascript. An ```id``` uniquely identifies code. You can think of id as an individual's drivers license. Only that person (or code) can use it. ```class``` on the other hand is used for multiple elements at once.
 ```<div id="nameOfId></div>  <div class="nameOfClass"></div>```
+
 #### Structure
+
 it's important to know the difference between **block** and **inline** elements as well.
 Block elements are a block of code that always starts on a new line. When you use a 'p' tage like this: ```<p>Hello</p> <p>There</p>``` The output will be like this.
 ```Hello```
@@ -446,10 +465,13 @@ Instead of using the universal div tag there's now specific tags for portions of
 ```<aside>``` We don't have to use a div anymore to create a section off to the side.
 ```<figure>``` will contain content like images, diagrams, and videos.
 ```<footer>``` is used as the footer! The footer will contain basic info like copywrite and other terms of service.
+
 ### CSS
+
 **CSS** - CSS stands for cascading stylesheets
 > The cascade in CSS refers to an algorithm that filters the CSS rules and applies them in accordance to their importance first. CSS is the design and looks of the web page. It applies styling to the structure!
 CSS code will look like this:
+
 ```
 
 body {  /*We target an element by typing what it's called. We then enclose all styles in '{ }'s*/
@@ -457,9 +479,12 @@ body {  /*We target an element by typing what it's called. We then enclose all s
   color: black;              /*This style all the text as black*/
 }
 ```
+
 ### Javascript
+
 **Javascript** - Javascript is an interpreted (browser interprets) just-in-time (runs code while page loads) language. It provides all the actions of the web page and more!
 Javascript will look like this:
+
 ```
 let i = 0;   //In Javascript we declare variables and use them whenever we need them
 while (i < 10) {  //This is called a while loop, which runs 10 times and outputs the number 0-9 in our console
@@ -467,10 +492,15 @@ while (i < 10) {  //This is called a while loop, which runs 10 times and outputs
   i++
 }
 ```
+
 ### Design principles
+
 As you get familiar with HTML, CSS, and Javascript you'll see a wide variety of tags and code for certain purposes. Tying everthing together we create a design that gets people to our site. But we can't just get **anyone** to our site. We have to target the audience. In doing so we create a specified plan to get a person we target to use our site and complete an action (with a good experience).
+
 # 2. HTML Text, CSS Intro, Basic Javascript
+
 ### HTML Text
+
 Things I don't look at often but need to incorporate in my code:
 ```<sup>``` Superscript creates <sup>th</sup>.  
 ```<sub>``` Subscript creates H<sub>2</sub>O.  
@@ -481,7 +511,9 @@ Things I don't look at often but need to incorporate in my code:
 ```<dfn>``` <p><dfn>Definition</dfn> defines the text</p>  
 ```<address>``` <address><p><a href="mailto:Email@example.com">Email@example.com</a></address>  
 ```<ins><del>``` <ins>Insert</ins><del>Delete</del>  
+
 ### CSS
+
 CSS is pretty easy for me. Each declaration has a property:value; pair.
 ```(property) margin: 0 (value);```
 Elements are targeted. Some of these I don't use very often like child, adjacent, and general.
@@ -493,8 +525,11 @@ Elements are targeted. Some of these I don't use very often like child, adjacent
 ```div a``` = descendant selector - selects all elements that are children, grandchildren, great grand...so on
 ```section+p``` = adjacent sibling selector. Targets the first element after that element
 ```section~p``` = general sibling selector. Targets the sibling that comes after the chosen element
+
 #### Inheritance
+
 If I create a ```<div>``` tag and store some ```<p>``` tags inside of it those ```<p>``` tags become inheritors of the ```div```'s styles. Giving the ```<div>``` a ```font-style``` will change **ALL** ```<p>``` tags within it.
+
 ```
 <div style="font-family: Ariel">
   <p>Funky time</p>
@@ -503,40 +538,58 @@ If I create a ```<div>``` tag and store some ```<p>``` tags inside of it those `
   <p>System failure imminent</p>
 </div>
 ```
+
 My paragraphs now have the Ariel style since the parent ```<div>``` gave it to them all.
+
 ### Javascript
+
 One of the hard parts at first when I was learning javascript was that you have to lay out all the instructions as individual steps. This means taking a simple process (in our mind), complicating it, and listing each step to make it work for the interpreter.
 Three basic data types:
 ```'String'``` - A string of text is..text!
 ```0.8890``` - Numberic values
 ```True/False``` - Boolean, which means it will be either true or false
 **Creating Arrays**: Arrays are objects and can be accessed as a variable. These can be used in other code to access the data inside.
+
 ```
 let firArray = [23, 45, 97];
 let secArray = ['potato', 'soup', 'chips'];
 console.log(firArray[1]);
 console.log(secArray[0]);
 ```
+
 Going forward I'd like to do a javascript warm up each morning to get the muscle memory, especially for loops.
+
 # 3. HTML Lists, CSS Boxes, JS Control Flow
+
 ## Lists, lists, lists
+
 Three types of markup for lists:
+
 * ```<ul>``` = Unordered lists
+
 1. ```<ol>``` = Ordered lists
+
 * ```<dl>``` = Definition lists
 Unordered lists create a list for information that doesn't need to be in any particular order.  
 Ordered lists are for ordered information like steps, instructions, recipes...  
 Definition lists are for words that are being defined.  
 Definition lists consist of:  
+
 > ```<dl>``` (definition list), ```<dt>``` (definition term), and ```<dd>``` (the definition's definition).  
+
 * The ```<dl>``` creates the list
 * The ```<dt>``` creates the term
 * The ```<dd>``` shows the sentence defining the term  
+
 ## Boxes
+
 Probably one of my top favorite subjects to go over.  
 Boxes can be the bane of some people's existence, especially with getting the right size and look that you want.
+
 ### Width and Height
+
 ```<width>``` and ```<height>``` control the size of the box. It can be measure in 3 different ways:
+
 1. Pixels
 `div {
   width: 100px;
@@ -579,26 +632,38 @@ div {
   overflow: scroll;
 }
 `
+
 ### Centering content
+
 `margin: auto;` will center content horizontally.
+
 ## Javascript
+
 ### Arrays
+
 Arrays are great at representing complex data. You can have a huge list of objects with properties in an array.
 This is an array - ```['String', 55, false, userName];``` Arrays have an index which can be called or changed. The index of the array is as follows:
+
 * 'String' is 0
 * 55 is 1
 * false is 2
 * userName is 3
 You can call these by using ```[]```. Example: ```myArray[1]``` will access the `55` in the array.
+
 ### If-Else statements
+
 if-else statements check conditions ```1 < 2 = true``` | ```1 > 3 = false```. If the condition is true it will run the code in your `{}`'s.
+
 ```
 if(1 < 3) {
   alert('Indeed, 1 is less than 3.')
 }
 ```
+
 ### Switch statements
+
 A switch statement uses levels, which determines which code will be ran. Since we're on level 2 it will display the second message.
+
 ```
 let msg;
 let level = 2;
@@ -613,52 +678,73 @@ switch (level) {
     break;
 }
 ```
+
 ### Falsy & Truthy
+
 Knowing a little bit of truthy and falsy will help in checking their equalities for conditionals.
+
 ### For & While loop
+
 For loop
+
 ```
 for (i = 0; i < 4; i++) {
   console.log('This will appear 4 times');
 }
 ```
+
 While loop
+
 ```
 let i = 1;
 while (i < 9) {
   console.log('This will apear 9 times');
 }
 ```
+
 # 4. HTML Links
+
 ```<a>``` is the anchor tag. It is used to link to another page, a portion on the same page, or to another page on the same website.
 Most importnat is its attribute ```href``` which stands for hypertext reference. This is the address or pathway that directs the browser to the new page.
 There are two different kinds of links - Relative and Absolute. Relative is more shorthand - ```/logo.png``` where absolute is more specific - ```https://www.DuckDuckGo.com```
 There is a file hierarchy made of parents, children, and grandchildren that make up file paths. The parent is the top of the hierarchy and the children are nested within it. The grandchildren are nested within the children.
+
 ### Link attributes
+
 There are multiple attributes with different functions.
+
 * ```mailto:``` - opens your default mail app and creates an outgoing email to the address you clicked.
 * ```target``` - opens the link in a new window
 * ```<a href="#header1">``` links to a specific part of the page by targeting the id of an attribute
+
 ## Layout
+
 Each element gets its own box, which makes building kinda easier. You can use this box as a container for other block level elements.  
 Elements are either block or inline elements. Block starts on a new line. Inline stays on the same line.
+
 ### Basic positioning
+
 Normal flow - Block level elements act as normal by starting on a new line.
 Relative positioning - Able to shift an element up, down, left, or right without bothering other elements.
 Absolute positioning - Takes the element out of its normal flow and positions it absolutely where you want it.
 Fixed positioning - Another form of absolute that positions the element based on the browser window.
 Float - turns an element into a block elements and allows it to shift left or right of other elements.
 z-index - This is used kind of like layers. The lower the index the higher up the layer. Lower index will be covered by higher indexed elements.
+
 ## Functions, methods, and objects
+
 A function is a task! It creates an action that we tell it to. We call it by its name(); and it does the thing.  
 Functions take in parameters as information to complete the task. This goes into its parenthases. Lastly, the expected output of a function is called its return value.  
+
 ```
 function yoSup() {
   console.log('Yo, sup?');
 }
 console.log(yoSup);
 ```
+
 An object is a collection of variables and functions. As such, the variables get renamed to properties and functions are named methods.
+
 ```
 let myPhone = {
   name: 'iPhone 2',
@@ -672,22 +758,32 @@ let myPhone = {
   }
 }
 ```
+
 Accessing the info:  
 `let phoneName = myPhone.name;`  
 `let phoneAlerts = myPhone.checkMessages();`
+
 # 5. HTML Images, CSS Color & Text
+
 ### Images
+
 `<img>` element creates an image. It's an inline element. It comes with a `src`, `alt`, and `title` attribute. Defining its width will automatically ajust the height.
 For accessability purposes the `<figure>` element is now used. It also comes with a `<figcaption>` to describe the image.
+
 ### Color
+
 Colors come in 4 different ways:
+
 1. RGB `(255, 255, 255, 0.3)` Opacity can also be used as a 4th value (0 ~ 1)
 2. Color name `red`
 3. Hex code `#FF03B4`
 4. HSLA `hsla(0, 100%, 100%, 0.5)` Hue, saturation, lightness, transparency (0 - 1 only)
 Having good contrast for text readability is important for those with eyesight issues.
+
 ### Text
+
 Text properties can be split into 2 different groups:
+
 1. porperties that change the font and appearance
 2. properties that have the same effect on text no matter what font is used
 ```font-weight``` : light, medium, bold, or black;
@@ -695,6 +791,7 @@ Text properties can be split into 2 different groups:
 ```font-stretch``` : condensed, regular, extended;
 Browsers don't always support the same fonts as other browsers so it's important to choose a multitude of fonts as a fail-safe.
 ```@font-face``` is a way to get a font without having to install it locally. It takes from a url (check licensing).  
+
 ```
 @font-face {
   font-family: 'aCoolFont`;
@@ -719,24 +816,34 @@ Kerning or ```letter-spacing``` or ```word-spacing``` : 0.2em, 1em;
 ```p:hover``` When the mouse hovers over the element you can specify values for it
 ```a:active``` When a user uses something its state can be changed with active
 ```form:focus``` change an elements state when it's focused by the user
+
 ### Image formats
+
 JPEG - Has data loss during compression and is generally best for scenery and photgraphs.
 PNG - Lossless (big files) and suits images with text and lots of sharp details.
 GIF - Lossless (big as well) and is mostly used for animations nowadays.
+
 # 6. JS Object Literals; The DOM  # 5. HTML Images, CSS Color & Text
+
 ### The problem domain
+
 The problem domain refers to the components that we need to understand in order to effectively tackle the problems with our code. If I were writing software for a game I would need to know its problem domain, which would be the games platorm (pc, xbox), its genre (story, shooter), sound, graphics, and user experience. Knowing these things lets me know what I'm working with in order to program a good game that people will like. Not knowing these components might make my game buggy, unintuitive, boring, or look and sound bad. Generally I think it's best to know the problem domain before even beginning to develop.
+
 ### Primitive valuse vs. Object reference
+
 Both of these affects the way that variables are made:
 Primitive values are variables that are assigned directly. Like this:  
 ``` let food = 'Tomotato'; ```  
 This variable is known as having **immutability** or not having the ability to mutate (change). We can clearly see it with this example:  
+
 ```
 let word = 'yeah';
 word[0] = 'm';
 ```
+
 Console logging `word` will still return `yeah`. The index of the word wouldn't change.  
 Object references just has a reference to the variable within it.  
+
 ``` const kyle = {
   name: 'Kyle H',
   occupation: 'Software Developer'
@@ -778,12 +885,16 @@ let myObject = {
 ```let myItem = myObject[food];```  
 ```let inStock = myObject.checkAvailability();```  
 ```let inStock = myObject['checkAvailability']();```  
+
 ### The Document Object Model (DOM)
+
 The DOM is a model of the web page made up of objects interpreted by the web browser. It's made up of nodes:  
+
 1. Document node - represents the entire web page
 2. Element node - elements within the DOM tree that can be targeted
 3. Attribute node - attributes of the elements that can be targeted
 4. Text node - represents text within an element  
+
 * `getElementByID` grab an element with an ID
 * `querySelector` selects CSS selectors
 * `getElementByClassName` grabs an element by class
@@ -801,12 +912,19 @@ The DOM is a model of the web page made up of objects interpreted by the web bro
 * `getAttribute`
 * `setAttribute`
 * `removeAttribute`
+
 #### item() method
+
 returns an individual node from the NodeList. Grabs the elements by index (0). Use the length property for multiple items. Use an if statement too!
+
 ## 7. HTML Tables; JS Constructor Functions
+
 ### Domain modeling
+
 This is a meat and potatoes code. It's basically where you make some concept code to be used in multiple instances. It's then used as a base for building objects and tasks so you don't have to tailor new object/tasks. It's like a one-size-fits all for your code that makes things easier and faster.
+
 ### HTML Tables
+
 `<table>` created the parent element containing the rest of the table.  
 `<tr>` This starts a new row  
 `<td>` This creates a single cell of table data within the row  
@@ -816,8 +934,11 @@ This is a meat and potatoes code. It's basically where you make some concept cod
 `<thead>` This is the heading of the table
 `<tbody>` creates the body of the table under the thead
 `<tfoot>` creates a footer under the body
+
 ### Constructor notation (my favorite)
+
 This is a way to create mutlitple objects without having to create individual object...  
+
 ```
 let person = new Object(); 
 
@@ -829,9 +950,12 @@ person.checkMeOut = function() {
   return this.name + ' is cool!';
 }
 ```
+
 You can call on the same constructor and create a new object that way.  
 You can also update the object: `person.name = "Jon";`.  
+
 #### Creating multiple objects
+
 ```
 function person(name, age, personality) {
   this.name = "Kyle";
@@ -843,40 +967,56 @@ function person(name, age, personality) {
   }
 }
 ```
+
 This is a great way to make objects!!!!!!!!!!!!
 `var kylesFriend = new person('Ryan', 28, "fun");`  
 `var kylesFriendTwo = new person('Austin', 24, "aggro");`  
 You can add and remove properties via:  
 `person.smell = "body odor"`  
 `delete person.smell;`
+
 * Just like variable, functions can also be used globally when written at the top of a script.
 Date has it's own object and many methods to access time.
+
 # 8. _More_ CSS Layout  
+
 ### Flexbox  
+
 `display: flex;` puts our element in the flexbox mode~  
+
 * automatically sets the parent to a block element
 * makes children inline (no wrap)
 * uses `align-items`, `justify-content`, and `flex-wrap` to change the behavior of the children.
 `Flex` has 3 values (shorthand)
+
 1. `flex-grow`
 2. `flex-shrink`
 3. `flex-basis`
+
 ### Grid
+
 `display: grid` is similar to flexbox, but controls multi axis  
 `display: grid-template-columns` creates 12 columsn
 `fr` units are measured in `rem`'s and determine spacing between the grid items.  
 `gap` inscreases the gap between the items (also in rem)  
 `grid-row: 1/3` and `grid-column: 1/4` tells the element to span the row down 3 spaces and the column to span right 4 spaces.  
+
 ### Flow layout
+
 `inline-block` gives an inline element the characteristics of a block level element while being inline.  
 `float` use sparingly, mostly when images are inline with text.  
 `relative` gives you the ability to move the element relative to its current position. This also makes the element the container for any absolute children.  
 `sticky` makes it so the element scrolls with you when it hits the edge of the parent element.  
 `fixed` makes the element fixed on the browser and doesn't move regardless of scrolling.  
+
 #### z-index
+
 acts like a layer where you can overlap elements
+
 # 9. Forms and Events  
+
 ## HTML forms
+
 Form control: Text, password, text area, radio buttons, checkboxes, drop down boxes, submission forms, image buttons, and uploading files.  
 There are several form controls that gather different information. Servers need to know these things to give the right info back.  
 Forms use name/value pairs in order to differentiate the information.  
@@ -889,6 +1029,7 @@ Forms use name/value pairs in order to differentiate the information.
 `type="checkbox" - gives checkboxes to choose  
 `select` - allows you to select from a list
 `select multiple="multiple"` - allows the used to select multiple items from the list
+
 ```
 <form>
 <select name="devices">
@@ -898,22 +1039,29 @@ Forms use name/value pairs in order to differentiate the information.
 </select>
 </form>
 ```
+
 `type="file"` - gives you the ability to upload a file to the server  
 `type="submit"` - gives you a submit button  
 `type="image"` - let's you use an image for a button  
 `<button>` - makes a button!  
+
 ## CSS  
+
 ### Lists
+
 `list-style-type` - let's you control the look of the bullet.  
 `list-style-image` - uses an image for the bullet  
 `list-style-position` - bullets are inside or outside. indent or no indent.  
 `list-style` - allows you to style your list generically.  
+
 ### Tables  
+
 `text-transform` - allows you to change the properties of the text  
 `letter-spacing` - gives space between each letter  
 `empty-cells` - allos you to show, hide, or inherit borders for empty cells.  
 `border-spacing` | `border-collapse` - gives space or mooshes all the cells together.  
 When styling an input you can set differnt properties of the input:  
+
 ```
 input {
   font-size: 1.5em;
@@ -921,41 +1069,61 @@ input {
   border: 1px solid black;
 }
 ```  
+
 `:focus` pseudo class makes it so the input cursor automatically sets a text field to be active so you can type into it without having to click it first.  
+
 ## Events
+
 Events happen in various ways that creates interactivity. Mouse click, on page load, or a keystroke.
+
 1. Select your element node(s).
 2. Indicate which event is happening (onClick).
 3. Create the code that's being called
 element.addEventListener('onClick', functionName, false/true);
 The item() method allows you to choose aa specific node from a node list by specifying the index of the node. Use the class attribute and use the length property to see the node list. Create an if statement to create all the indexes as variables. Using [ ]'s is faster and preferred.  
+
 # 10. Debugging  
+
 ## THE STACK  
+
 This really helped me understand how Javascript is thinking. It basically stacks tasks (and puts the first tasks below it on hold). The task finishes and returns value to next task on the stack in line.
+
 ## Hoisting  
+
 Javascript prepares all the variables and functions in a sort of list at the top before running all of the code. It evaluates all the variables, functions, and their parameters. Afterwards, it begins to execute based on same execution contexts (global and local).
 Javascript has **Lexical Scope** which means that a function nested within a function can use any and all variables within its parent function. However, the parent cannot access any variables from the child function.
+
 ## Error objects
+
 * Sytax Error: Syntax wasn't followed or there is something missing... like a period.
 * Reference Error: Refers to a variable that doesn't exist or a variable is not spelled correctly OR the scope of the variable isn't reachable.
 * Type Error: The data type expected wasn't returned, such as spelling `document.write` with any capitals will return with a type error.
 * Range Error: Can't start a new array with -1! (haha). Numbers don't match up or doesn't exist.  
+
 ## Debugging workflow
+
 1. Narrow it down to the problem.
+
 * Check the console and read the error.
 * Read the line number
+
 2. Check how far the script is running and where it stops.
+
 * Use console.log's to see where code stops running.
+
 3. Use breakpoints within the console to check variable values and such.
 4. See if the variables around the breakpoint return the expected values
 5. Test smaller pieces like the variables, function, objects, and methods to see if they produce the results.
 6. Check the number of parameters in a function and the items in an array.
 7. Rinse & Repeat in another section of code.
 8. Leave cookie crumb console.log's as you code.
+
 ## Console methods
+
 * console.info() - used for general info or as a little icon to see
 * console.warn() - used as warnings and has a little triangle
 * console.error() - can be used to hold errors and has a little red circly x thing  
+
 ```js
 console.group('A title');    
   console.log('something', something);  
@@ -1086,12 +1254,14 @@ var barData = {
 You can use a fallback method in case `<canvas>` isn't supported by the browser. To do this you put text or an img inside the canvas tags.  
 
 > Canvas can be set to 2D or 3D using its `.getContext()` method.
+
 ```js
 var canvas = document.getElementById('tutorial');
 var ctx = canvas.getContext('2d');
 ```
 
 > You can also check for support of canvas in the JS
+
 ```js
 var canvas = document.getElementById('tutorial');
 if (canvas.getContext) {
@@ -1164,48 +1334,71 @@ HTML5's storage is based on key/value pairs (hey, like an object!) You store the
 Using `setItem()` with a named key as its parameter will SILENTLY overwrite its previous value.  
 Using `getItem()` with a named key will get your data, but if the named key doesn't exist you'll get `Null`.  
 > This code is the original way:
+
 ```js
 let foo = localStorage.getItem("bar); //set foo as a string of "bar"
 // ...
 localStorage.setItem("bar", foo); //set the data as "bar" instead of foo
 ```
+
 > It can be written using bracket notation instead for easier readability.
+
 ```js
 let foo = localStorage["bar"];
 // ...
 localStorage["bar"] = foo;
 ```
+
 It's like when you store a variable and then declare it as something else. Hm.  
+
 ## `removeItem()`
+
 `removeItem()` will remove the key and data. Doing this to a non-existent key will do nothing.  
+
 ## `key()`  
+
 `key()` will iterate through the index of key value pairs. `key(4)` and so on.  
+
 ## Tracking changes to the storage area (storage event)
+
 Storage events are fired on the `window` object any time we use `setItem()`, `removeItem()`, or `clear()` AND it actually changes something.  
 We can access some important properties in the storage event:  
+
 1. key - the named key that was added, removed, or modified (Type: string)
 2. oldValue - the previous value of the key (Type: any)
 3. newValue - the new value of the key (Type: any)
 4. url - the page that triggered the method that triggered the change
 The storage event cannot be canceled.  
+
 ## Limitation of the browser with local storage  
+
 Currently browsers only get 5mb of local storage for each origin (origin has many factors). You may recieve `QUOTA_EXCEEDED_ERR` when that storage is full or trying to be surpassed. Lastly, there's a `No` error where the request for additional storage is..no.  
+
 ## New database?
+
 The Indexed Database API is the next best thing that may be the new gravy. It offers advanced, persistant, local storage for web apps. It has what's called an object store with 'records' with a set number of fields and that has a specific datatype.
+
 # 14. CSS Transforms, Transitions, and Animations
+
 ## CSS Transforms
+
 Transforms come in 2 different forms. 2D and 3D!  
 Not all browsers support the transform property so we have to add the prefix to the css in order for it to work accross platforms:  
+
 ```css
 -webkit-transform: scale(1.5); /* Webkit is for Chrome and Safari browsers */
 -moz-transform: scale(1.5); /* Moz is for firefox */
 -ms-transform: scale(1.5); /* MS is for internet explorer */
 -o-transform: scale(1.5); /* O is for Opera */
 ```  
+
 ### 2D/3D Transfroms
+
 2D Works on the x (horizontal) and y (vertical) axis to transform elements.  
 3D Works on the x (horizontal), y (vertical), and z (depth) axis to transform elements.  
+
 ## Rotate  - rotate elements
+
 ```css
 .class1 {
   transform: rotate(20deg);
@@ -1214,8 +1407,11 @@ Not all browsers support the transform property so we have to add the prefix to 
   transform: rotate(-50deg);
 }
 ```
+
 What this produces is a reotation of these elements by 20 degrees and -50 degrees.  
+
 ## Scale - size elements
+
 ```css
 .class1 {
   transform: scale(1.5);  
@@ -1224,10 +1420,14 @@ What this produces is a reotation of these elements by 20 degrees and -50 degree
   transform: scale(0.75);
 }
 ```
+
 This will produce a scaling effect that changes the size of the elements.  
 `scaleX` and `scaleY` can also be used to scale them horizontally and vertically.  
+
 ## Translate - move elements
+
 Translate works kind of like reltaive positioning~ it can push and pull the element without messing with the normal flow of the page.
+
 ```css
 class1 {
   transform: translateX(-10px);
@@ -1239,7 +1439,9 @@ class3 {                            /*  -10px     25%   */
   transform: translate(-10px, 25%); /* (x axis, y axis) */
 }
 ```
+
 ## Skew - distorts and element
+
 ```css
 class1 {
   transform: skewX(5deg);
@@ -1251,13 +1453,17 @@ class3 {
   trasnform: skew(5deg, -20deg);  /* (x axis, y axis) */
 }
 ```
+
 ## Shorthand transform
+
 ```css
 class1 {
   transform: skew(-20deg, 10deg) scale(1.5) rotate(35deg);
 }
 ```
+
 ## Transform origin - where to start the transformation property
+
 ```css
 class1 { 
   transform: rotate(15deg);
@@ -1265,49 +1471,67 @@ class1 {
 }
 `transform-origin: 0;  /* using one number acts as a value for x and y */
 ```
+
 ## Perspective - changes the vanishing point of an element
+
 This works on parent elements to apply perspective to children as well
+
 ```css
 class1 {
   transform: perspective(200px) rotateX(45deg);
 }
 ```
+
 ## 3D Transforms
+
 ```css
 .class1 {
   transform: persepctive(200px) rotateZ(45deg)
 }
 ```
+
 ## 3D Scale
+
 ```css
 class1 {
   transform: perspective(200px) scaleZ(1.75);
 }
 ```
+
 ## 3D translate
+
 ```css
 class1 {
   transform: translateZ(50px);
 }
 ```
+
 ## Transform style - transforms nested elements who didn't get 3d properties
+
 Applies to the parent element
+
 ```css
 class1 {
   transform-style: preserve-3d;
 }
 ```
+
 ## Backface visibility - hides the back of an element on rotate
+
 ```css
 backface-visibility: hidden;
 ```
+
 ## Transitions
+
 In order for transitions to work it must have a change in state. It uses `:hover`, `:focus`, `:active`, and `:target` pseudo classes.
 There are 4 transitional properties:
+
 1. `transition-property`
 2. `transition-duration`
 3. `transition-timing-function`
 4. `transition-delay`  
+
 ```css
 class1: {
   background: #ccc;
@@ -1319,9 +1543,13 @@ class1:hover {
   background: #fff;
 }
 ```
+
 This gives us an element with a background color, makes the background it's transition property so that the duration and linear propert can hook onto it. Finally there's the hover state that changes the background color over 1 second linearly to another color.  
+
 ### Transition properties
+
 - `background`
+
 * `border-radius;`
 * `background-color`
 * `background-position`
@@ -1355,12 +1583,15 @@ This gives us an element with a background color, makes the background it's tran
 * `visibility`
 * `width`
 * `word-spacing`
+
 ### Transition timing function
+
 `linear` makes the animation evenly times with no speeding up or slowing down. It's one static transition.  
 `ease-in` starts off slow and speeds up towards the end of the animation.  
 `ease-out` has the opposite effect in that it slows down towards the end instead.  
 > Each transition timing function has a `bezier-curve` that can be set to customize the timing. It's in the form of `cubic-bezier(x1, y1, x2, y2)`.
 If you set mulitple properties to have transitions, it also correlates to its timing-function:
+
 ```css
 class1 {
   transform: transition-property: border, background;  /* 1. Border, 2. Background */
@@ -1368,10 +1599,14 @@ class1 {
   transform: transition-timing-function: ease-in, ease-out; /* 1. ease-in (border), 2. ease-out (background) */
 }
 ```
+
 There's two seperate transitions happening with their own timeframe for completion, which we've denoted with a comma and correlated them to each property.  
 `transition-delay` - delays the transition for a specified amount of time and then performs the animation.
+
 ## Animation keyframes - whew
+
 Essentially what we do with keyframes is creating a starting point with values, making a mid point (or however many point in between) with updated values, and a stopping point with updated values. It then animates to the keyframes and cycles through the value properties until it gets to the stopping point values.  
+
 ```css
 @keyframes slide {
   0% {
@@ -1386,7 +1621,9 @@ Essentially what we do with keyframes is creating a starting point with values, 
   }
 }
 ```
+
 To make the animation work we need a few properties:
+
 * `animation-name` - we set this to slide in the above example. We set the keyframes of slide.
 * `animation-duration` - sets the time for the animation to persist.
 * `animation-timing-function` - sets the ease-in, ease-out, and linear.
@@ -1399,14 +1636,18 @@ To make the animation work we need a few properties:
   * `alternate-reverse` - plays the animation backwards first and then alternates to play the animation forward.
 * `animation-play-state` - allows you to pause the animation when clicked.
 * `animation-fill-mode` - didn't understand this.
+
 # Arrow functions
+
 An arrow function expression is a compact alternative to a traditional function expression. It's uses are limited.
+
 * can't use `this` or `super`
 * shouldn't be used as methods
 * don't have access to `new.target` keyword
 * aren't suitable for `call`, `apply`, and `bind` methods
 * can't be used as a constructor
 * can't use `yield` within its body
+
 ```js
 //Traditional function
 function (a) {
@@ -1421,7 +1662,9 @@ function (a) {
 //Finally
 a => a + 100;
 ```
+
 Arrow functions require the parethases if the function has multiple arguments or no arguments.
+
 ```js
 //Traditional
 function (a, b) {
@@ -1438,7 +1681,9 @@ function (){
 //Arrow with no arguments
 () => a + b + 100;
 ```
+
 Arrow functions also require the brackets and `return` if it's multiple lines of code.
+
 ```js
 //Traditional
 function (a, b) {
@@ -1451,7 +1696,9 @@ function (a, b) {
   return a + b + chuck;
 }
 ```
+
 Finally, in named functions we simply five the arrow function a variable instead.
+
 ```js
 //Traditional
 function kyle(a) {
@@ -1460,29 +1707,43 @@ function kyle(a) {
 //Arrow
 let kyle = a => a + 100;
 ```
+
 ## Basic syntax
+
 ### One parameter
+
 `param => expression`
+
 ### Multiple parameters
+
 `(param1, param2) => expression`
+
 ### Multiple lines of code
+
 ```js
 param => {
   let a = 1;
   return a + param;
 }
 ```
+
 ### Multiple parameters and lines of code
+
 ```js
 (param1, paramN) => {
   let k = 3;
   return k + param1 + paramN;
 }
 ```
+
 ## Advanced syntax
+
 ### Return an object literal expression
+
 `parameter => ({key: "string"})` This returns the object `{key: "string"}`
+
 ### Rest paramters are supported
+
 ```js
 function sum(...arguments) { //arguments are made into an array
   return arguments.reduce((previous, current) => {
@@ -1492,8 +1753,10 @@ function sum(...arguments) { //arguments are made into an array
 console.log(sum(1, 2, 3, 4, 5, 6, 7)); //As many arguments as you want.
 //Expected output is 28.
 ```
+
 Rest parameters create an array of the arguments. Thus- sort, map, forEach, or pop can be applied on it directly.
 It can also be used with regular parameters:
+
 ```js
 function multiply(multiplier, ...theArgs) {
   return theArgs.map(element => {
@@ -1503,16 +1766,22 @@ function multiply(multiplier, ...theArgs) {
 let arr = multiply(2, 15, 25, 42)
 console.log(arr)  // [30, 50, 84]
 ```
+
 ### Supports default parameters as well
+
 ```js
 (a=400, b=20, c) => a + b + c;
 ```
+
 ### Suports destructuring toooooo
+
 ```js
 ([a, b] = [10, 20]) => a + b; //30
 ({a, b} = {a: 10, b: 20}) => a + b; //30
 ```
+
 ## Greatest benefit of using arrow functions is with DOM-level methods (setTimeout, setInterval, addEventListener)
+
 ```js
 //Traditional
 let obj = {
@@ -1537,7 +1806,9 @@ let obj = {
 }
 obj.doSomethingLater();
 ```
+
 ### Arrows have no binding arguments. Have to use other arguments from somewhere else
+
 ```js
 let arguments = [1, 2, 3];
 let arr = () => arguments[0];
@@ -1548,7 +1819,9 @@ function beep(n) {
 }
 beep(10); /*It can only borrow arguments from its local scope. It won't be able to capture arguments[0].*/
 ```
+
 Using rest parameters is a good alternative to using an argument object.
+
 ```js
 functon boop(n) {
   let f = (...arguments) => arguments[0] + n;
@@ -1556,29 +1829,43 @@ functon boop(n) {
 }
 beep(3); /*Returns 13 because its using its own local argument from the rest parameter*/
 ```
+
 ### Does not support `new`
+
 ### Does not support `prototype`
+
 ## Arrow function body
+
 ### Concise body syntax
+
 ```js
 let myFunction = x => x * x;
 //Has an implied return.
 ```
+
 Returning object literals within a concise body will not work as expected:
+
 ```js
 let myFunction = () => {beep: 1}; //Returns undefined. beep is treated as a label.
 ```
+
 Instead, we must wrap the object literal in parenthases
+
 ```js
 let myFunction = () => ({beep: 1}); //We get an object instead.
 ```
+
 ### Block body syntax
+
 ```js
 let myFunction = (x, y) => {return x + y};
 //Block body NEEDS a return to work.
 ```
+
 ## Line breaks
+
 Arrow functions can have line breaks to make code prettified:
+
 ```js
 let myFunction = (a, b, c) =>
 1;
@@ -1595,6 +1882,7 @@ let myFunction = (
 ) => 1; 
 //No syntax errors from any of these
 ```
+
 # Classes
 
 Classes function similar to functions but have some better functionality. Prototypes can be built in and it's easier to read.
@@ -1657,7 +1945,6 @@ Simply put, component are flexible, reusable, and independent pieces of code whi
 5. Encapsulated - When called the component doesn’t expose details within the component
 6. Independent - Made with minimal dependencies on other components.
 
-
 > What are the advantages of using component-based architecture?
 
 1. Ease of deployment - New and better components come out in time and they’re easier to implement and have less impact on other components.
@@ -1670,6 +1957,7 @@ Ease of development - The interfaces are well known and provide defined function
 7. Independent - Components do all the work with flexibility and are able to work with other components.
 
 ## Props
+
 > What is “props” short for?
 
 **Properties**. These are passing the property details from one component to another.
@@ -1719,3 +2007,84 @@ Every time a state is changed is when we re-render the application.
 > What are some examples of things that we could store in state?
 
 We could store counters, lists, time, dates, current state of an element.
+
+# Passing functions as props
+
+## Lists and keys
+
+> What does .map() return?
+.map () returns a new array after iterating through an existing array.
+
+> If I want to loop through an array and display each value in JSX, how do I do that in React?
+Values can be displayed using the callback of the the .map() and displaying it using `{ }` curly braces elsewhere.
+
+> Each list item needs a unique **KEY**.
+> What is the purpose of a key?
+Helps React identify which elements have changed, have been added, or removed. Keys are given to the elements inside the array for identity.  
+* The best way to pick a key is:
+
+```js
+<li key = {callback.id}>
+```
+
+- They only have to be unique with siblings. It can be the same keys within different arrays.
+
+## Spread operator
+
+> What is the spread operator?
+Allows us to add items to arrays or object and spreads an array into our function's arguments. It refers to `...`.
+
+> List 4 things that the spread operator can do.
+
+1. Combine an object
+2. Convert a Node list to an array
+3. Add to a state in React
+4. Add an item to a list
+
+> Give an example of using the spread operator to combine two arrays.
+
+```js
+  let numbers1 = [1, 2, 3];
+  let numbers2 = [4, 5, 6];
+  let numbers3 = [...numbers1,...numbers2];
+```
+
+> Give an example of using the spread operator to add a new item to an array.
+
+```js
+let numbers = [1, 2, 3];
+let num = 9;
+numbers = [...numbers, num];
+```
+
+> Give an example of using the spread operator to combine two objects into one.
+
+```js
+let pen = {ink: "black"};
+let pencil = {lead: "0.5mm"};
+let writingUtensil = {...pen,...pencil};
+```
+
+## How to pass a function between components
+
+> In the video, what is the first step that the developer does to pass functions between components?
+He first creates a function where the state is located (outside the render) and uses the map() method on the array.
+
+> In your own words, what does the increment function do?
+
+1. The increment function is going to fire when the add button is clicked.
+2. Upon clicking the function is going to begin with the parameter of name (in this.state people array).
+3. It will map this.state.people and iterate through the array.
+4. The callback is p, which he assigs an if statement to. If the name strictly equals to any of the iterations then it will run the code on that iteration.
+5. The count property for that iteration will then increment by 1(++) every time the button is clicked.
+6. Lastly, the new state of p (the callback) is returned and the UI is updated to display the new result using setState.
+
+> How can you pass a method from a parent component into a child component?
+Since a method exists in the component we can pass it like we would a prop-  ```increment = {this.increment}```. It's usable!
+
+> How does the child component invoke a method that was passed to it from a parent component?
+We all it just like we would a prop!
+
+```js
+this.props.increment(this.props.name);
+```
