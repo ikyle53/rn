@@ -39,9 +39,9 @@
 ## Table of contents
 
 1. [React & Components](https://github.com/ikyle53/rn#react-and-components)
-2. State and Props
-3. Passing functions as props
-4. React and Forms
+2. [State and Props](https://github.com/ikyle53/rn#state-and-props)
+3. [Passing functions as props](https://github.com/ikyle53/rn#passing-functions-as-props)
+4. [React and Forms](https://github.com/ikyle53/rn#react-and-forms)
 
 # Growth Mindset
 
