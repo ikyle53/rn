@@ -41,6 +41,7 @@
 1. [React & Components](https://github.com/ikyle53/rn#react-and-components)
 2. State and Props
 3. Passing functions as props
+4. React and Forms
 
 # Growth Mindset
 
@@ -2087,4 +2088,55 @@ We all it just like we would a prop!
 
 ```js
 this.props.increment(this.props.name);
+```
+
+# React and Forms
+
+## Forms
+
+> What is a ‘Controlled Component’?
+
+When the form data is handled by the component's state, this becomes a controlled component. The component's state is the defining source of what happens in and out of the form.
+
+> Should we wait to store the users responses from the form into state when they submit the form OR should we update the state with their responses as soon as they enter them? Why.
+
+We would like to update the state with the responses as soon as they enter them becuase if we're passing this information to other components we'd like it to update as it becomes immediately available so the other components are updated as well.
+
+> How do we target what the user is entering if we have an event handler on an input field?
+
+We'll target the state of the component as the values are passed in. As the values are put in the state is updated. So we'll pass it `this.state.value`:
+
+```js
+<input type="text" value={this.state.value} onChange={this.handleChange} />
+```
+
+The `onChange` will call `this.handleChange` with `event` as the parameter:
+
+```js
+handleChange(event) {
+  this.setState({
+    value: event.target.value
+  });
+}
+```
+
+`event.target` delegates the event here (here being the input). The event is every key stroke within the input. And of course value is what's being updated to state for whatever we want to do with it.
+
+## Ternary operator
+
+Why would we use a ternary operator?
+
+We really want that one line of code...
+
+Rewrite the following statement using a ternary statement:
+```js
+if(x===y){
+  console.log(true);
+} else {
+  console.log(false);
+}
+```
+
+```js
+x===y ? console.log(true) : console.log(false);
 ```
