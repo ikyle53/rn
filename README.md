@@ -42,6 +42,7 @@
 2. [State and Props](https://github.com/ikyle53/rn#state-and-props)
 3. [Passing functions as props](https://github.com/ikyle53/rn#passing-functions-as-props)
 4. [React and Forms](https://github.com/ikyle53/rn#react-and-forms)
+5. [Putting it all together](lskdjfl)
 
 # Growth Mindset
 
@@ -2140,3 +2141,45 @@ if(x===y){
 ```js
 x===y ? console.log(true) : console.log(false);
 ```
+
+# Putting it all together (Thinking in React)
+
+## React stuff
+
+> What is the single responsibility principle and how does it apply to components?  
+
+If something does more than one thing it should be decomposed into subcomponents. For instance, if a component builds a particular element with data to the screen and also builds a another seperate element with different data being passed to it it should be split into another component.
+
+> What does it mean to build a ‘static’ version of your application?  
+
+A static version is a version of the web page that has no real functionality. You can't interact with the elements or do anything. It simply shows information and the UI. This also covers props that send data from component to component. 
+
+> Once you have a static application, what do you need to add?  
+
+At this point states need to be added in order to have interactivity. State changes will update the UI as events fire.
+
+> What are the three questions you can ask to determine if something is state?  
+
+1. Is the data that we're passing sent as a prop?
+2. Does the data not change over time?
+3. Is it being calculated via a prop or state?
+
+> How can you identify where state needs to live?  
+
+1. State needs to live somewhere that renders something based on the state.
+2. It needs to live in a component above all of the other components in the hierarchy that's common to the others.
+3. A completely new component whose only job is to hold the state.
+
+## Higher-order functions
+
+> What is a “higher-order function”?  
+
+Functions that operate on other functions in which they're used as arguments or being returned.
+
+> Explore the greaterThan function as defined in the reading. In your own words, what is line 2 of this function doing?  
+
+Line 2 is returning an arrow function that takes `m` as its argument and is testing it against `n` to see if it's greater.
+
+> Explain how either map or reduce operates, with regards to higher-order functions.  
+
+Map and Reduce are both using the higher-order function of `for()` and is transforming the elements within the array and pushing it to a new array. Basically what's happening is that Map and Reduce are producing a for loop for the array and and using its arguments to capture the needed data via an array and a filler that acts as an indexer or element grabber. The data is then transformed and pushed.
