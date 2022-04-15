@@ -42,7 +42,7 @@
 2. [State and Props](https://github.com/ikyle53/rn#state-and-props)
 3. [Passing functions as props](https://github.com/ikyle53/rn#passing-functions-as-props)
 4. [React and Forms](https://github.com/ikyle53/rn#react-and-forms)
-5. [Putting it all together](lskdjfl)
+5. [Putting it all together](https://github.com/ikyle53/rn#putting-it-all-together-thinking-in-react)
 
 # Growth Mindset
 
