@@ -43,6 +43,7 @@
 3. [Passing functions as props](https://github.com/ikyle53/rn#passing-functions-as-props)
 4. [React and Forms](https://github.com/ikyle53/rn#react-and-forms)
 5. [Putting it all together](https://github.com/ikyle53/rn#putting-it-all-together-thinking-in-react)
+6. [Node.js](stuff.com)
 
 # Growth Mindset
 
@@ -1550,7 +1551,7 @@ This gives us an element with a background color, makes the background it's tran
 
 ### Transition properties
 
-- `background`
+* `background`
 
 * `border-radius;`
 * `background-color`
@@ -2023,13 +2024,14 @@ Values can be displayed using the callback of the the .map() and displaying it u
 > Each list item needs a unique **KEY**.
 > What is the purpose of a key?
 Helps React identify which elements have changed, have been added, or removed. Keys are given to the elements inside the array for identity.  
+
 * The best way to pick a key is:
 
 ```js
 <li key = {callback.id}>
 ```
 
-- They only have to be unique with siblings. It can be the same keys within different arrays.
+* They only have to be unique with siblings. It can be the same keys within different arrays.
 
 ## Spread operator
 
@@ -2130,6 +2132,7 @@ Why would we use a ternary operator?
 We really want that one line of code...
 
 Rewrite the following statement using a ternary statement:
+
 ```js
 if(x===y){
   console.log(true);
@@ -2152,7 +2155,7 @@ If something does more than one thing it should be decomposed into subcomponents
 
 > What does it mean to build a ‘static’ version of your application?  
 
-A static version is a version of the web page that has no real functionality. You can't interact with the elements or do anything. It simply shows information and the UI. This also covers props that send data from component to component. 
+A static version is a version of the web page that has no real functionality. You can't interact with the elements or do anything. It simply shows information and the UI. This also covers props that send data from component to component.
 
 > Once you have a static application, what do you need to add?  
 
@@ -2183,3 +2186,61 @@ Line 2 is returning an arrow function that takes `m` as its argument and is test
 > Explain how either map or reduce operates, with regards to higher-order functions.  
 
 Map and Reduce are both using the higher-order function of `for()` and is transforming the elements within the array and pushing it to a new array. Basically what's happening is that Map and Reduce are producing a for loop for the array and and using its arguments to capture the needed data via an array and a filler that acts as an indexer or element grabber. The data is then transformed and pushed.
+
+# 6. Node.js
+
+> What is node.js?  
+
+"Node.js is a Javascript runtime built on Chrome's V8 Javascript engine." It basically compiles Javascript and is used primarily for event-driven servers. This means Node.js can create, open, read, write, delete, and close files on a server. It can also add, delete, and modify data in a database. It also generates page contents.
+
+> In your own words, what is Chrome’s V8 JavaScript Engine?  
+
+ The V8 engine is bascially a compiler for Javascript that can handle memory, provide the data types, operators, object, and functions. It's written in C++
+
+> What does it mean that node is a JavaScript runtime?  
+
+It means the javascript is executed when it's ran. This also includes Javascript outside of the web browser.
+
+> What is npm?  
+
+"Node Package Manager" It's a package manager for downloading packages of Javascript code.
+
+> What version of node are you running on your machine?  
+
+v16
+
+> What version of npm are you running on your machine?  
+
+v8.3.1
+
+> What command would you type to install a library/package  
+
+called ‘jshint’?  
+
+`npm install -g jshint` This installs jshint globally.
+
+> What is node used for?  
+
+* Installing and running various build tools that automate the process of developing Javascipt apps.
+* Bundles Javascript files and dependencies together in a static asset.
+* Runs various tests on code.
+* Automates code linting and style checking.
+
+## Pair programming
+
+> What are the 6 reasons for pair programming?  
+
+1. Efficiency - produces higher quality code
+2. Collaboration - More focus, less procrastination
+3. Learning - Learn from peers!
+4. Social skills - Improve talking and explaining
+5. Job interview readiness - Helps sharpen many skills
+6. Work environement readiness - Always ready!
+
+> In your experience, which of these reasons have you found most beneficial?  
+
+Learning - I like to see new techniques that I otherwise would have never known on my own. There's also a lot of efficient ways to code something that I was made aware of.
+
+> How does pair programming work?  
+
+A pair of programmers work together typically in 2 seperate roles. The Drive and Navigator. The Driver is the one who handles the keyboard while the Navigator thinks about the code and spots bugs.
