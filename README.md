@@ -2245,3 +2245,33 @@ Learning - I like to see new techniques that I otherwise would have never known 
 > How does pair programming work?  
 
 A pair of programmers work together typically in 2 seperate roles. The Drive and Navigator. The Driver is the one who handles the keyboard while the Navigator thinks about the code and spots bugs.
+
+# 7. REST
+
+> Who is Roy Fielding?
+
+One of the authors of the HTTP specification. He helped write the first servers that sent documents across the internet.
+
+> Why don’t the techniques that we use today work well when we need to be able to talk to all of the machines in the world?
+
+Having computers connected to every computer in the world would be an issue. Instead, a computer needs to contact a few other computers/servers and get access to resources.
+
+> What is the HTTP protocol that Fielding and his friends created?
+
+It's  a general purpose protocol for sending, receiving, and deleting data.
+
+> What does a GET do?
+
+A get pulls information from a URL
+
+> What does a POST do?
+
+A post pushes inforamtion to a URL
+
+> What does PUT do?
+
+A put replaces information to a URL
+
+> What does PATCH do?
+
+Patch pushes specific data to a URL
