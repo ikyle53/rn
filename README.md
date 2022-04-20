@@ -2275,3 +2275,47 @@ A put replaces information to a URL
 > What does PATCH do?
 
 Patch pushes specific data to a URL
+
+# 8. API's
+
+> What does REST stand for?  
+
+REST stands for Representational state transfer  
+
+> REST APIs are designed around a **RESOURCES**.
+
+> What is an identifier of a resource? Give an example.  
+
+The identifier of a resource is a unique URI assigned to the resource. Exapmple: `https://amazon.com/orderNumber/k39dj57cks` The order number is only used for this order and no other order.  
+
+> What are the most common HTTP verbs?  
+
+`GET, POST, PUT, PATCH,` and `DELETE`  
+
+> What should the URIs be based on?  
+
+URI's should be based on resources (nouns) and not the operations of the resources (verbs).  
+
+> Give an example of a good URI.  
+
+`https://kyle-website.com/modelingPictures` It doesn't have an action word attached and you can assume it takes you to a url of me modeling. Woo!  
+
+> What does it mean to have a ‘chatty’ web API? Is this a good or a bad thing?  
+
+A chatty web API is one that has a lot of requests. The more requests the bigger the work load and the slower it becomes. This is bad.  
+
+> What status code does a successful GET request return?  
+
+Status code 200. All good.  
+
+> What status code does an unsuccessful GET request return?  
+
+Status code 404. Not found!  
+
+> What status code does a successful POST request return?  
+
+Status code 200 or 204.  
+
+> What status code does a successful DELETE request return?  
+
+Status code 204. No content.
