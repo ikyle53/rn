@@ -2319,3 +2319,47 @@ Status code 200 or 204.
 > What status code does a successful DELETE request return?  
 
 Status code 204. No content.
+
+# 9. Functional programming
+
+## Functional Programming
+
+> What is functional programming?  
+
+Binding everything in pure mathematical functions and uses expressions instead of statements. We want to produce values.  
+
+> What is a pure function and how do we know if something is a pure function?  
+
+Pure functions will return the same result if given the same arguments. There's no side effect to using the function.
+
+> What are the benefits of a pure function?  
+
+- Stable, consistent, and predictable. Given the same parameters we always get the same results.
+- easier to test
+- 
+
+> What is immutability?  
+
+Immutability means the state cannot change after something been created.
+
+> What is Referential transparency?  
+
+Referential transparency refers to a function that gives the same results for the same input.
+
+## Modules
+
+> What is a module?  
+
+A utility that does a specific task (a function that only does one thing)
+
+> What does the word ‘require’ do?  
+
+It's a global function that takes in a str and imports the module. `require(./module);` It's now usable throughout the app using `module.exports = module;`
+
+> How do we bring another module into the file the we are working in?  
+
+We require the module first and then we use `module.exports = module;`
+
+> What do we have to do to make a module available?  
+
+We make a variable of the require~
