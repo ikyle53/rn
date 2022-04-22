@@ -2363,3 +2363,47 @@ We require the module first and then we use `module.exports = module;`
 > What do we have to do to make a module available?  
 
 We make a variable of the require~
+
+# 10. In memory storage
+
+## Call stack
+
+**What is a ‘call’?**  
+
+Function invocation!
+
+**How many ‘calls’ can happen at once?**  
+
+One call at a time from top to bottom of the stack.
+
+**What does LIFO mean?**  
+
+Last in First out - Whatever comes in last on the stock is going to pop out first.
+
+**Draw an example of a call stack and the functions that would need to be invoked to generate that call stack.**  
+
+[LIFO](/LIFO.png) drawing using figma.
+
+**What causes a Stack Overflow?**  
+
+A stack overflow is caused by a function that calls itself. This is called a recursive function.
+
+## Javascript error messages
+
+**What is a ‘reference error’?**  
+An error that occurs when the reference can't be found. AKA the variable wasn't declared.
+
+**What is a ‘syntax error’?**  
+Syntax is generally due to a missing semi-colon, objects not having quotes, or missing parenthases.
+
+**What is a ‘range error’?**  
+A range error refers to the range of an object or array and will throw the error if it's outside the number of indexes within that object or array.
+
+**What is a ‘tyep error’?**  
+This refers to the type of data. If we write something as a string and try to do a mathematical equation with it like the modulus, we'll get the type error becuase we can't get a remaineder from a string.
+
+**What is a breakpoint?**  
+A breakpoint is a console utility that allows us to see if a specific line of code was ran. We can check and see if it runs and continue to check and see if other lines run in order to better debug our code.
+
+**What does the word ‘debugger’ do in your code?**  
+`debugger` creates a pseudo breakpoint on the line we want to break at. It basically does the same thing as breakpoint but we add it in as code. I know I'd forget it or something and not take it out.
