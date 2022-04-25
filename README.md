@@ -2334,9 +2334,10 @@ Pure functions will return the same result if given the same arguments. There's 
 
 > What are the benefits of a pure function?  
 
-- Stable, consistent, and predictable. Given the same parameters we always get the same results.
-- easier to test
-- 
+* Stable, consistent, and predictable. Given the same parameters we always get the same results.
+* easier to test
+
+-
 
 > What is immutability?  
 
@@ -2407,3 +2408,69 @@ A breakpoint is a console utility that allows us to see if a specific line of co
 
 **What does the word ‘debugger’ do in your code?**  
 `debugger` creates a pseudo breakpoint on the line we want to break at. It basically does the same thing as breakpoint but we add it in as code. I know I'd forget it or something and not take it out.
+
+# 11. Mongo and Mongoose
+
+Five differences between SQL and NoSQL databases:  
+
+SQL:
+
+1. Relational databases
+2. Table based
+3. Predefined schema
+4. Vertically scalable
+5. For for complex queries
+
+NoSQL:
+
+1. Non-relational
+2. Document based, key-value pairs, graph database, wide-column stores
+3. Dynamic schema
+4. Horizontally scalable
+5. Not fit for complex queries
+
+**What kind of data is a good fit for an SQL database?**  
+
+Relational data that's stored in tables with a unique identifier for each record.  
+
+**Give a real world example**  
+
+A small business uses relational data to process orders for its products. It uses a table for customer info and each row of data (phone #, address, name) gets a unique ID. In another table each record includes the ID of the customer that places the oreder, the product ordered, quanitity and so on.  
+
+**What kind of data is a good fit a NoSQL database?**  
+Hierarchical data is typically a file system where like items are stored together as key-value pairs.  
+
+**Give a real world example.**  
+This can be a database full of transactions where all the orders are in one folder, stock of items in another folder, and employee information in another.  
+
+**Which type of database is best for hierarchical data storage?**  NoSQL  
+
+**Which type of database is best for scalability?**  
+SQL - you won't have to buy new servers since you can increase the operformance of the hardware (vertical scaling). SQL also has more support so it's easier to scale with all the resources available.
+
+**What does SQL stand for?**  
+Structured Query Language  
+
+**What is a relational database?**  
+Works with table!  
+
+**What type of structure does a relational database work with?**  
+Fields structure (ID, name, price, description, etc)  
+
+**What is a ‘schema’?**  
+A strict format that we have to follow each time like the above example.  
+
+**What is a NoSQL database?**  
+"Not only SQL" - Non tabular database that stores non-relational data.  
+
+**How does it work?**  
+The database is made of collections and within the collections are documents (kind of like a table.) You don't need a schema.  
+
+**What is inside of a Mongo database?**  
+The data is stored in one place and made up of collections of data that have documents inside of it with unique ID's.  
+
+**Which is more flexible - SQL or MongoDB? and why.**  
+it depends on the application and the data being stored. Different needs for different solutions.  
+
+**What is the disadvantage of a NoSQL database?**  
+Expensive! More servers for bigger projects. No schema, which means you can't rely on your record to have a certain field. No relations, which means more updating of data on your end.
