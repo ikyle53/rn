@@ -2474,3 +2474,52 @@ it depends on the application and the data being stored. Different needs for dif
 
 **What is the disadvantage of a NoSQL database?**  
 Expensive! More servers for bigger projects. No schema, which means you can't rely on your record to have a certain field. No relations, which means more updating of data on your end.
+
+# 12. CRUD
+
+In your own words, describe what each group of status code represents:
+
+- 100’s = Informational~ The header of the request was recieved but most likely the rest of the request will fail.
+- 200’s = Success codes. The request was successful.
+- 300’s = The request was sent to a resource that isn't there anymore.
+- 400’s = Our fault. The request is not what the server was expecting so it gets rejected.
+- 500’s = The server's fault. The server has internal issues that we can fix on our side or issues that we can't fix on someone else's side.
+
+**What is a status code 202?**  
+Status code 202 tells us that the request went well, however the request will be processed in the near future.  
+
+**What is a status code 308?**  
+Permanent redirect- This redirects to a new URL where the resource is available.  
+
+**What code would you use if an update didn’t return data to a client?**  
+204 tells us that the request was received but unfortunately there was no content :(  
+
+**What code would you use if a resource used to exist but no longer does?**  
+410 tells us that the resource existed in the past, but now it doesn't!  
+
+**What is the ‘Forbidden’ status code?**  
+The big 403
+
+**Why do we need to pull our MongoDB database string out of our server and put it into our .env?**  
+When the site is deployed we don't want to use local host as our connection point. We need it to be out of our main app and use it as an environmental variable.  
+  
+**What is middleware?**  
+Code that gets ran once the server gets a request but before it hits our routes
+
+**What does app.use(express.json()) do?**  
+This lets us use .json files as a body inside a post or get element  
+
+**What does the /:id mean in a route?**  
+It means that it's a parameter and we can pass params after the `/` within the URL  
+
+**What is the difference between PUT and PATCH?**  
+Patch updates only part of the data (i.e. just the name and not any of ther other information). Put replaces the resource in it's entirety.  
+
+**How do you make a default value in a schema?**  
+`default: Date.now` we use the default keyword as a key value pair within the object of our schema.  
+
+**What does a 500 error status code mean?**  
+There's an error on the server which casues the transaction of the request to fail  
+
+**What is the difference between a status 200 and a status 201?**  
+201 means we successfully created something. 200 just means that the transaction was successful.
