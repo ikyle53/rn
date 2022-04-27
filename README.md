@@ -2523,3 +2523,25 @@ There's an error on the server which casues the transaction of the request to fa
 
 **What is the difference between a status 200 and a status 201?**  
 201 means we successfully created something. 200 just means that the transaction was successful.
+
+# 13. More CRUD
+
+## CRUD Basics  
+
+**Which HTTP method would you use to update a record through an API?**  
+PUT replaces all current data with the new data.  
+
+**Which REST methods require an ID parameter?**  
+Update & Delete
+
+CRUD API
+**What’s the relationship between REST and CRUD?**  
+CRUD manipulates information which describes the function of an application. REST is controlling data through HTTP commands. They both create, modify, and delete information.
+
+**If you had to describe the process of creating a RESTful API in 5 steps, what would they be?**  
+
+1. Configure Auth0
+2. Create root endpoint
+3. Test endpoint
+4. Add resources
+5. Secure the RESTful API
