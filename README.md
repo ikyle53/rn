@@ -2545,3 +2545,20 @@ CRUD manipulates information which describes the function of an application. RES
 3. Test endpoint
 4. Add resources
 5. Secure the RESTful API
+
+# 14. Derbersity and icrusion
+
+What occurred during the same time as the beginning of the decline of women in computer science?  
+Personal computers were being marketed and sold to households. More and more men became interested in computer, playing games, etc...
+
+Why does it matter that males had been playing on computers growing up?  
+The marketing was catered to men and the culture became that men were the dominant population of computer users.
+
+When are diversity efforts most successful?  
+When company leaders practice what they preach.
+
+Why do diverse companies perform better?  
+The talent pool is opened up beyond the hemogenous networks.
+
+Give an example of how a diverse company can serve a diverse user base or vise-versa.  
+If there's a bit of diversity it can serve wonders in language and cultural understanding. It can lead to a better user experience if these things are known.
