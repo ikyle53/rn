@@ -2906,3 +2906,19 @@ I bring a sense of joy with my work. It’s hard for me to be negative and I nev
 1. Re-read the problem  
 2. Make sub-problems instead of trying to solve it as a whole  
 3. Re-visit the basics and see if something clicks  
+
+## 401 Class 01  
+
+### Pain  
+
+I think all of us have varying susceptibility to pain as well as varying levels of tolerance to it. From my own experience I grew up in an abusive household, survived 5 years of military, and worked mainly (very dangerous) physical labor jobs. I've got this mindset that pain and suffering are one in the same becuase I think we all feel both depending on our levels of motivation and emotional state in the moment. I understand completely that pain/suffering make our lives better the more we tolerate it and push forward. I live by the mantra of "suffer well" because I know every day brings something new to make me better. Surviving the pain/suffering is what motivates me to move forward becuase I see the forward progress and where my life has gone because of it.  
+
+### BIG O  
+
+Big O is a new concept I haven't hear of. It describes the amount of time and space that an algorithms uses to complete a task. 1 or 2 of the examples provided seem a little trivial but the rest seems okay. I understand that it's basically a "pick the best algorithm for the data set" kind of thing so that a program can work quicker and more efficiently.  
+
+### Facts and Myths  
+
+Had to bookmark this video. Ned is an absolute mad man for researching these quirks in Python. I find it useful to know how the code is working under the hood becuase in the end I can see how a solution would supposedly return the right answers, but in reality Python is doing something else deep down (like reassiging x instead of returning it). I also tried out Python Tutor and it's really incredible how it breaks down each step of my code.  
+
+
