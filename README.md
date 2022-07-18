@@ -49,7 +49,7 @@
 # **401 Reading Notes**  
 
 ## Table of contents  
-1.
+1. [Class 01](https://github.com/ikyle53/rn#401-class-01)
 2.
 3.
 
