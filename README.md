@@ -2876,3 +2876,11 @@ Renaming a column:
 Bash is like using a computer only using the command line. Generally I use the graphical user interface where I can drag and drop files, delete them, and start programs by double clicking. In contrast, Bash allows me to do all of that with commands. Furthermore, there's more I can do under the hood with Bash than I could using the GUI (or at least quicker).  
 
 using `man [command]` allows me to see what that command does as well as its uses in the terminal.  
+
+## Growth Mindset  
+
+I think the hardest part of learning to code is the challenge itself. A lot of what I've been learning I thought I could never learn because I thought I needed to be a math genius (which does help!) but in reality it's much more than that. Imposter syndrome is a real thing in this industry. I've asked mulitple people in the industry from the power hour talks and they've all been through it.  
+
+Propbably some of the biggest take-aways from the growth mind-set is how I approach my probelms. Not all problems are the same and have one solid soltuion. Therefore, I need to plan more and slow down. I know for a fact that I code with the big problem in mind rather than splitting that big problem into multiple parts. It's a new habit for me that I need to make into a lifestyle and also encourage other to do as well (tactfully).  
+
+I wholly believe in the saying from Thomas Edison that "I have not failed. I have found 10,000 ways that don't work." STORY OF MY LIFE. The same is true for software development. I feel that I've made more mistakes than successes, but in doing so I've found so many ways that don't work and I can definitely use this wisdom to pass on to the next newbie.  
