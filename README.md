@@ -2884,3 +2884,25 @@ I think the hardest part of learning to code is the challenge itself. A lot of w
 Propbably some of the biggest take-aways from the growth mind-set is how I approach my probelms. Not all problems are the same and have one solid soltuion. Therefore, I need to plan more and slow down. I know for a fact that I code with the big problem in mind rather than splitting that big problem into multiple parts. It's a new habit for me that I need to make into a lifestyle and also encourage other to do as well (tactfully).  
 
 I wholly believe in the saying from Thomas Edison that "I have not failed. I have found 10,000 ways that don't work." STORY OF MY LIFE. The same is true for software development. I feel that I've made more mistakes than successes, but in doing so I've found so many ways that don't work and I can definitely use this wisdom to pass on to the next newbie.  
+
+## Engineering reading  
+
+Act like I make $1,000 an hour:  
+I think this mindset is imperative in acheiveing success, especially in saying no to anything that could be blocking focus. I know that this is a big one for me and I've already started saying no to a plethora of little things. I've managed to focus more in a few hours than I have in a while. I know this mindset will also help me in serving others as well as my servitude to Christ.  
+
+Thinking like a programmer:  
+I am absolutely the sterotypical "Try solution, fail. Try another solution till it works." kind of guy. This article was a good one because I think I finally get why it's been repeated since day one.  
+
+Understand - Know what the problem is fully and describe each step. If I can't understand even one part of it I need to go back.  
+Plan - Plan each step out and what solution I can bring to the table in order to solve the problem. Having a plan in place before I work makes everything feel seamless and I stress WAY less.  
+Divide - Coding is convoluted as it is. Breaking it into smaller parts makes the work feel so much easier becuase I can focus on a tiny fraction at a time rather than thinking so big (thinking big can overwhelm me).  
+
+> What’s the one thing I bring to this career (and a potential employer) that nobody else can?  
+
+I bring a sense of joy with my work. It’s hard for me to be negative and I never contribute to bad atmospheres. I make my own.
+
+> What are 3 things I’ll start doing to “un-stick” myself whenever I get stuck on tough piece of code, logic, or feature?  
+
+1. Re-read the problem  
+2. Make sub-problems instead of trying to solve it as a whole  
+3. Re-visit the basics and see if something clicks  
