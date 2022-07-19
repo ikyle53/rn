@@ -50,8 +50,8 @@
 
 ## Table of contents  
 1. [Class 01](https://github.com/ikyle53/rn#401-class-01)
-2.
-3.
+2. [Class 02](https://github.com/ikyle53/rn#401-class-02)
+3. 
 
 # Growth Mindset
 
@@ -1347,7 +1347,7 @@ Using `getItem()` with a named key will get your data, but if the named key does
 > This code is the original way:
 
 ```js
-let foo = localStorage.getItem("bar); //set foo as a string of "bar"
+let foo = localStorage.getItem("bar"); //set foo as a string of "bar"
 // ...
 localStorage.setItem("bar", foo); //set the data as "bar" instead of foo
 ```
@@ -1397,10 +1397,10 @@ Transforms come in 2 different forms. 2D and 3D!
 Not all browsers support the transform property so we have to add the prefix to the css in order for it to work accross platforms:  
 
 ```css
--webkit-transform: scale(1.5); /* Webkit is for Chrome and Safari browsers */
--moz-transform: scale(1.5); /* Moz is for firefox */
--ms-transform: scale(1.5); /* MS is for internet explorer */
--o-transform: scale(1.5); /* O is for Opera */
+-webkit-transform:scale(1.5) /* Webkit is for Chrome and Safari browsers */
+-moz-transform:scale(1.5) /* Moz is for firefox */
+-ms-transform:scale(1.5) /* MS is for internet explorer */
+-o-transform:scale(1.5) /* O is for Opera */
 ```  
 
 ### 2D/3D Transfroms
@@ -2921,4 +2921,134 @@ Big O is a new concept I haven't hear of. It describes the amount of time and sp
 
 Had to bookmark this video. Ned is an absolute mad man for researching these quirks in Python. I find it useful to know how the code is working under the hood becuase in the end I can see how a solution would supposedly return the right answers, but in reality Python is doing something else deep down (like reassiging x instead of returning it). I also tried out Python Tutor and it's really incredible how it breaks down each step of my code.  
 
+## 401 Class 02  
 
+Test Driven Development (TDD)  
+```python
+def test_should_return_female_when_the_name_is_from_female_gender():
+    detector = GenderDetector()
+    expected_gender = detector.run(‘Ana’) # This is an expected answer
+    assert expected_gender == ‘female’ # Assert is basically stating that its female
+```
+AAA:  
+Arrange - Organize the input data in order to help the function execute  
+Act - Execution of the code  
+Assert - After execution, check to see if the result matches the expected output  
+
+THE CYCLE OF LIFE of TDD:  
+- Write a unit test and make it fail (intentionally)
+- Write the feature and make the test pass
+- Refactor the code 
+
+This cycle can be used on every new added feature.  
+
+### if __name__ = __main__
+`__name__` is a built in variable of Python that acts a main function call to start running the code.
+The type of `__name__` is a `str` if it were to be typed. It also equates to `__main__` by default. 
+
+When a Python script is stand-alone with no imports the value of `__name__` will = `__main__`  
+Interestingly though when I import a script the `__name__` variable of that script becomes the name of
+the actual script.
+`import math` means I'm importing the script math.py. Its `__name__` is = `math.py`. The main script that 
+I'm working on that's importing math is called `__name__` or `__main__`.  
+
+Simply put, if I ommit the following:  
+`if __name__ == "__main__"`  
+The script will be ran when imported. Thus, it's a GREAT idea to put this guard in place in order to import
+the script without running it so it can be called later during runtime.
+
+### Recursion?  
+Recursion is when a function calls itself directly or indirectly. This can be used as an algorithm to solve
+certain problems. It copyies itself and solves sub-problems of the original problem. In doing so I have to 
+create a termination case so it stops...  
+
+Recursion reduces the length of code and there's a few advantages over iterations.  
+
+Properties of recursion:  
+- performs the same operations multiple times with different inputs
+- in each step smaller inputs are provided to make the problem smaller
+- a base condition is required to make it stop otherwise I'll have an infinite loop
+
+The recursion base case should always be met in order to avoid a loop or stack overflow.  
+
+Indirect vs direct recursion  
+Indirect recursion occurs when the func calls itself from within another function.  
+Direct incursion is simply the function calling itself.  
+
+Tailed vs non-tailed  
+Tailed recursion is when the recursion is the last thing called in the function  
+non-tailed recursion is when the recursion is called anywhere else in the function  
+
+Memory allocation  
+When a function called within the script memory is allocated to that script on the stack. During recursion
+memory is stacked on top of the current memory allocated from calling the function from the script. Every function
+call in the recursion creates a copy of local variables. Upon reaching the base case the result is given back to
+the calling function. After that memory is de-allocated.  
+
+```python
+def printFun(test):
+    if (test < 1):
+        return
+    else:
+        print(test, end=" ")
+        printFun(test-1)
+        print(test, end=" ")
+        return
+
+test = 10
+printFun(test)
+10 9 8 7 6 5 4 3 2 1 1 2 3 4 5 6 7 8 9 10 
+```  
+
+It's amazing what recursion does. It basically stacks itself in memory, runs the first print statement, calls itself
+again until the base case is satisfied and then returns back through the stack doing the second print statement. 
+
+![img.png](recursionStack.png)  
+
+Recursion vs Iteration  
+- Recursion terminates when base case is met.
+- Used in functions.
+- Every recursion call needs extra space in memory
+- Smaller code size
+
+- Iterations terminate when the condition becomes false
+- Used with loops
+- Every iteration needs no extra memory
+- Larger code size  
+
+In the case of Big(O) recursion will take up more time and space (stack) but make code length a lot less and easier
+to use.  
+
+### Strings  
+
+```python
+"Kyle\'s got some nice buns!" # Escape character for apostrophe
+"Whoa\n" # \n creates a new line
+
+# Strings are iterable!
+k = "Kyle"
+print(k[1]) # y
+print(len(k)) # 4
+print(k + "got nice buns") # Kyle got nice buns
+
+# raw string ignores the \
+raw = "this \n string is so \n raw!"
+print(raw) # literally prints "this \n string is so \n raw!" ignoring special characters
+
+#Multi line string
+"""
+I'm
+very
+multi-lined
+"""
+```
+
+String methods: 
+- s.lower(), s.upper()
+- s.strip() # White space removed
+- s.isalpha(), isdigit(), isspace() # tests characters
+- s.startswith("string"), s.endswith("string") # tests to see if the string starts or ends with the given string
+- s.find("string")
+- s.replace("old", "new") # replaces all instances of the old string
+- s.plit("delimiter") - splits a string based on the delimiter. No delimiter defualts to split the string by white space. Returns it as a list.
+- s.join(list) - `"---".join(['a', 'b', 'c'])` = a---b---c
