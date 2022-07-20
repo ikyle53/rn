@@ -51,7 +51,7 @@
 ## Table of contents  
 1. [Class 01](https://github.com/ikyle53/rn#401-class-01)
 2. [Class 02](https://github.com/ikyle53/rn#401-class-02)
-3. 
+3. [Class 03](https://github.com/ikyle53/rn#401-class-03)
 
 # Growth Mindset
 
@@ -3052,3 +3052,266 @@ String methods:
 - s.replace("old", "new") # replaces all instances of the old string
 - s.plit("delimiter") - splits a string based on the delimiter. No delimiter defualts to split the string by white space. Returns it as a list.
 - s.join(list) - `"---".join(['a', 'b', 'c'])` = a---b---c
+
+
+## 401 Class 03  
+
+### What makes up a file and why that's important to Python  
+#### What is a file exactly?  
+
+A file is a set of bytes who neighbor one another (bytes being memory of bit multiples/8bit memory). The organization
+of the data creates a format that takes the form of a text file, an executable program, etc. These byte files are
+translated into binary (0's and 1's) for the computer to interpret.  
+
+Files generally consist of 3 parts:  
+1. Head: metadata about the contents of the file (size, name, type, etc)
+2. Data: contents of the file created by the user
+3. End of File (EOF): a special character denoting the end of the file  
+
+The data is represented by an extension to tell me the format of the document.  
+
+#### File path  
+
+A file path is always required. It is a string pointing to where the file is located.  
+
+File paths consist of 3 parts:  
+1. Folder path: folder location seperated by `/`'s
+2. File name: The name of the file
+3. Extension: `file.extension` denotes file type
+
+If within the current working directory (cwd) the file can be referenced directly. `kyle.file`  
+
+If within the cwd and I want to access another file in a different folder I'll use: `../path/dogbreeds.gif`  
+
+The `../../..` can be chained to access other directories. `../../anotherFile.png` two directories up.  
+
+#### Line endings  
+
+Line endings have their own standard using the ASA and ISO standards as follows:  
+
+- Carriage return`(CR or \r)`
+- Line feed `(LF or \n)`
+- Both `CR+LF \r\n`
+- Windows uses both
+- Mac uses `LF or \n` 
+
+Example .txt file from windows:  
+```
+My favorite games:\r\n
+Dragon's Dogma\r\n
+Final Fantasy\r\n
+Monster Hunter\r\n
+Warhammer 40\r\n
+```
+Unix interpretation:  
+```
+My favorite games:\r
+\n
+Dragon's Dogma\r
+\n
+Final Fantasy\r
+\n
+Monster Hunter\r
+\n
+Warhammer 40\r
+\n
+```
+
+This difference in interpretation has to be accounted for when writing code for either. This can make iteration a
+nightmare.  
+
+#### Character encodings  
+
+The encoding of byte data is the translation of byte data into something readable by humans. Typically these characters 
+are assigned a numerical value to represent them. The two most common are `ASCII` and `UNICODE`formats.  
+- ASCII can store up to 128 characters
+- UNICODE can store up to 1,114,112 characters
+- ASCII is actually a subset of Unicode (UTF-8)
+
+ASCII and Unicode share the same numerical to character values.
+
+> Parsing a file with incorrect character encoding can result in failure to represent/misrepresentation of characters
+
+If a file was created using UTF-8 and ASCII is used to encode the characters there may be characters outside its 128
+character limit. Error, error!  
+
+#### Opening a file in Python  
+
+`open()` built-in function that requires one argument- the file/file path.  
+
+```python
+file = open("kyle.file")
+```
+
+Closing the file is just as important as opening it. Not properly closing the file can cause resource leaks. It should
+be coded to ensure no unwanted behavior.  
+
+```python
+reader = open("kyles.file")
+try:
+    # file processing stuff
+finally:
+    reader.close()
+```
+
+The `with` statement can also be used. It automatically closes the file once it leaves the `with` statement even in
+cases of error. This method is recommended over the `.close()` due to automatic closing on errors.  
+```python
+with open("kyles.file") as reader: # the file is assigned as reader
+    # file processing stuff
+```
+
+There is a second positional argument here within `open()`:  
+```python
+with open("kyles.file", 'r') as reader:
+    # file processing stuff
+```
+
+The following are the most common modes for opening files:
+- `'r'` open for reading (default)
+- `'w'` open for writing, truncating
+- `'rb'` or `'wb'` open for reading or writing in binary mode  
+
+#### File objects  
+A file object is an object exposing a file-oriented API (`read()`, `write()`) to an underlying resource.  
+
+There are 3 categories of file objects:  
+- Text files
+- Buffered binary
+- Raw binary files
+
+Text files:  
+```python
+open("kyle.txt")
+open("kyle.txt", 'r') # read
+open("kyle.txt", 'w') # write
+```
+
+`open()` will return the `TextIOWrapper` file object when typed
+```python
+class io.TextIOWrapper(buffer, encoding=None, errors=None, newline=None, line_buffering=False, write_through=False)
+```
+TextIOWrapper provides default values via its class to the text file. Each argument can be changed to specify how I
+want the file to perform. Example: the encoding argument can equal UTF-8 specifically and encode that file using 
+UTF-8 only.
+
+Buffered binary types:  
+This type of file object is used to read and write binary files.  
+```python
+open("kyles.file", 'rb')  # read binary (io.BufferedReader class)
+open("kyles.file", 'wb')  # write binary (io.BufferedWriter class)
+```
+```python
+class io.BufferedWriter(raw, buffer_size=DEFAULT_BUFFER_SIZE) # Data is placed in an internal buffer and then written out to the RawIOBase
+class io.BufferedReader(raw, buffer_size=DEFAULT_BUFFER_SIZE) # Data is kept in an internal buffer
+```
+
+Raw files types:  
+Used for low-level building blocks for binary and text streams.
+
+> Typically not used  
+
+```python
+open('abc.txt', 'rb', buffering=0) # open() will return the FileIO file object
+lass io.FileIO(name, mode='r', closefd=True, opener=None) # OS level file containing bytes data
+```
+
+### The basics of reading and writing in Python  
+#### Methods for reading a file:  
+- `.read(size=-1)` - this reads the file based on the number of `size` bytes. If no argument is passed the entire file
+is read.
+- `.readline(size=-1` - reads at most the `size` number of characters from the line. This continues to the end of th line
+and then wraps back around. If no argument is passed the entire line is read.
+- `.readline()` - This reads the remaining lines from the file object and returns it as a list.
+
+```python
+>>> with open('kyle.txt', 'r') as reader:
+>>>     # Read and print the file contents
+>>>     print(reader.read())
+My favorite games:
+Dragon's Dogma
+Final Fantasy
+Monster Hunter
+Warhammer 40
+```
+
+```python
+>>> with open('kyle.txt', 'r') as reader:
+>>>     # Read and print the file contents
+>>>     print(reader.readline(5))
+>>>     print(reader.readline(5))
+My fa
+vorit
+```
+Iterating over each line using readline() and a while loop
+```python
+>>> with open('kyles.txt', 'r') as reader:
+>>>    line = reader.readline()
+>>>    while line != '':
+>>>        print(line, end='') # end meaning end of print. The EOF is ''
+>>>        line = reader.readline()
+My favorite games:
+Dragon's Dogma
+Final Fantasy
+Monster Hunter
+Warhammer 40
+```
+
+Second way to iterate:  
+```python
+>>> with open('dog_breeds.txt', 'r') as reader:
+>>>     for line in reader.readlines():
+>>>         print(line, end='')
+```
+Best method and memory efficient:  
+```python
+>>> with open('dog_breeds.txt', 'r') as reader:
+>>>     for line in reader:
+>>>         print(line, end='')
+```
+
+#### Methods for writing  
+
+- `'.write(string)'` - writes a string to the file
+- `'.writeline(seq)'` - writes the sequence to the file. No line ending are appended to each sequence item. I have to add them
+```python
+with open('kyle.txt', 'w') as writer:
+    writer.write('Some added text') # Appends a string to the file
+```
+
+#### Methods for working with bytes  
+
+```python
+with open('kyles.txt', 'rb') as reader:
+    print(reader.read())
+b'My favorite games:\n'
+b'Dragon's Dogma\n'
+etc...
+```
+
+## Exceptions  
+Exceptions are custom error messages that I can throw to clue the user in one what went wrong.  
+
+`raise`:  
+```python
+x = 10
+if x > 5:
+    raise Exception('x should not exceed 5. The value of x was: {}'.format(x))
+```
+
+`assert`:  The following passes on linux machines. Otherwise it'll give the assertionError text
+```python
+import sys
+assert ('linux' in sys.platform), "This code runs on Linux only."
+```
+
+`try` and `except`:  
+Catches and handles exceptions. The following gives an exception error to tell the user what happened.
+```python
+def linux_interaction():
+assert ('linux' in sys.platform), "This code runs on Linux only."
+    try: 
+        linux_interaction()
+    except:
+        print('Linux function wasn't ran. Only works on Linux systems.)
+```
