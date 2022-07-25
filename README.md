@@ -52,6 +52,9 @@
 1. [Class 01](https://github.com/ikyle53/rn#401-class-01)
 2. [Class 02](https://github.com/ikyle53/rn#401-class-02)
 3. [Class 03](https://github.com/ikyle53/rn#401-class-03)
+4. [Class 04](https://github.com/ikyle53/rn#401-class-04)
+5. [Class 05](https://github.com/ikyle53/rn#401-class-05)
+6. [Class 06](https://github.com/ikyle53/rn#401-class-06)
 
 # Growth Mindset
 
@@ -3315,3 +3318,215 @@ assert ('linux' in sys.platform), "This code runs on Linux only."
     except:
         print('Linux function wasn't ran. Only works on Linux systems.)
 ```
+
+## 401 Class 04  
+
+### Classes  
+Simple explanation:  
+A Class gives an object function and variables it can work with.  
+
+### Assigning a class:  
+```python
+my_object = my_class()
+```
+### my_object now holds an object of the class. I can now access variables and functions within the class.  
+```python
+print(my_object.variable)
+```
+
+### Multiple objects of the same class can be created:  
+```python
+my_objectx = my_class()
+my_objecty = my_class()
+
+# I can change the variable within the class if I need to
+my_objectx.variable = "A different string from y"
+```
+
+### Accessing a function uses the same notation:  
+```python
+myobject.function()
+```
+
+### __init__ constructor method  
+This is a method that assigns a value to the class using `self` and object parameters  
+
+`self` represents the instance of the class. It allows easy access to the class methods and parameters for use
+in other methods of the class.  
+
+```python
+class NumberHolder:
+   def __init__(self, number): # Takes in self and a number
+       self.number = number # Uses the instance of self to construct the number
+       
+   def return_number(self): # This function uses the instance of self as the parameter to access the number
+       return self.number # Returns the constructed number
+
+var = NumberHolder(7) # Calls the class with the parameter of 7, which uses self.number to assign it to the class
+print(var.returnNumber()) # Prints '7'
+```
+
+### Thinking recursively  
+
+A recursion is a function defined in terms of itself via self-referential expressions.  
+
+This means that the function will continue to call itself and repeat its behavior until a condition is met. A result is
+then returned.  
+
+I terms of finding the factorial it can be broken down into smaller parts:  
+```python
+n! = n x (n−1)!
+n! = n x (n−1) x (n−2)!
+n! = n x (n−1) x (n−2) x (n−3)! # Base case of 1
+⋅
+⋅
+n! = n x (n−1) x (n−2) x (n−3) ⋅⋅⋅⋅ x 3! 
+n! = n x (n−1) x (n−2) x (n−3) ⋅⋅⋅⋅ x 3 x 2!
+n! = n x (n−1) x (n−2) x (n−3) ⋅⋅⋅⋅ x 3 x 2 x 1! # Base case == 1
+```
+
+```python
+def factorial_recursive(n):
+    # Base case: 1! = 1
+    if n == 1: # Base case of 1. Once n - 1 reaches 1 it is returned and the rest of the function isn't ran.
+        return 1
+
+    # Recursive case: n! = n * (n-1)!
+    else:
+        return n * factorial_recursive(n-1) # Recursion of n * n-1 for factorial
+```
+### Maintaining state:  
+```python
+def sum_recursive(current_number, accumulated_sum):
+    # Base case
+    # Return the final state
+    if current_number == 11: # Base case of 11
+        return accumulated_sum
+
+    # Recursive case
+    # Thread the state through the recursive call
+    else:
+        return sum_recursive(current_number + 1, accumulated_sum + current_number) 
+        # current_number is counted up by 1. accumulated_sum continues to be added onto with the current_number
+```
+
+![img.png](img.png)
+
+### Testing  
+
+It's rare that I will write 1 or 2 tests. There needs to be a 'test suite' full of them.  
+
+`pytest.fixture` are objects that share data across tests.
+
+## 401 Class 05
+
+Big O is evaluated on 2 factors
+1. Running time (time efficiency/complexity)
+   1. The amount of time needed to complete
+2. Memory space (space efficiency/complexity)
+   1. The amount of memory resources a function uses to store data and instructions
+
+Big O describes the worst case in terms of efficiency using the space and time values.  
+
+These are analyzed in 4 key areas:  
+1. Input size
+2. Units of measurement
+3. Orders of growth
+4. Best case, worst case, average case  
+
+### Input size
+Represented by `n` the input size refers to the number of parameters and their sizes.
+
+The higher `n` becomes the more likely time and space increases.  
+
+### Units of measure  
+- BigO's **time** is measure in milliseconds.
+- Number of **operations** are measured (lines of code)
+- Number of **basic operations** (most time-consuming operation)
+- Memory is special
+  - Amount of space needed to hold the code for the algorithm
+  - Amount of space needed to hold the input data
+  - Amount of space needed to hold the output data
+  - Amount of space needed to hold the working space during calculation
+
+### Orders of growth
+Constant - O(1) - Time is constant because there's no dependency on the input. Simple. Time to execute is constant.  
+
+Linear Time O(n) -  Complexity(memory) increases at the same rate as the input size(n) (regular loop and recursion)  
+
+Linearithmatic Time O(n x lgn) - Slightly increases complexity as input size increases (Merge Sort or search an array
+of arrays)  
+
+Logorithm Time O(lgn) - As input size(n) increases, complexity increases at a slower pace. (Binary search!)  
+
+Quadratic Time O(n^2) - Complexity growth is input size(n) multiplied by input size(n). Usually nested loops of iteration or 
+recursion using n and immediately iterate or recur again by n. (Brute force comparison)  
+
+Cubic Time - O(n^3) - Deeply nested loops  
+
+Exponential Time - O(2^n) - Whatever the input size is then it's going to recurse or iterate that many times  
+
+Factorila Time O(n!) - Complexity (memory) increases by a rate of input size (n) multiplied by every integer less than 
+(n). (Every possible way to arrange a deck of cards)  
+
+### Linked lists  
+
+Linked lists are a sequence of nodes that are linked. Each node references the next node in the link. Each node holds 
+data.  
+
+Singly - Only one reference. Points to the `next` node only.  
+
+Doubly - Refers to having 2 references. A `next` node and a `previous` node.  
+
+Head - reference of Type node that denotes the first node in the linked list  
+
+Current - reference of Type nod that denotes the current variable at the head to guarentee I'm starting at the beginning
+of the linked list.
+
+## 401 Class 06
+
+### Random module  
+
+`Randint` - accepts two parameters: a lowest and a highest number.  
+`print(random.randint(0, 100)`  
+
+`Random` - `random.random() * 100`  
+
+`Choice` - Generate a random value from the sequence.  
+`random.choice(['red', 'blue', 'white'])`
+
+`Shuffle` - The shuffle function, shuffles the elements in list in place, so they are in a random order.  
+`x = [[i] for i in range(10)]`  
+`shuffle(x)`  
+
+`Randrange` - Generate a randomly selected element from range(start, stop, step)
+
+```python
+random.randrange(start, stop[, step])
+import random
+for i in range(3):
+    print random.randrange(0, 101, 5)
+```
+
+## Risk analysis  
+
+How to perform Risk Analysis?  
+There are three steps:
+Searching the risk
+Analyzing the impact of each individual risk
+Measures for the risk identified  
+
+
+## Dependencies  
+
+Dependency injection refers to the transfer of creating the objects from a main class to a dependency injector and then
+using that dependent object  
+
+Instead of recreating an object with different properties I can use dependency injection to create those new features
+without having to re-create the original class.  
+
+Three types:  
+1. Constructor
+2. Setter
+3. Interface 
+
