@@ -46,7 +46,7 @@
 6. [Node.js](stuff)
 7. [REST](stuff)
 
-# **401 Reading Notes**  
+# **401 Reading Notes (Python)**  
 
 ## Table of contents  
 1. [Class 01](https://github.com/ikyle53/rn#401-class-01)
@@ -55,6 +55,11 @@
 4. [Class 04](https://github.com/ikyle53/rn#401-class-04)
 5. [Class 05](https://github.com/ikyle53/rn#401-class-05)
 6. [Class 06](https://github.com/ikyle53/rn#401-class-06)
+
+# **401 Reading Notes (Java)**
+
+## Table of contents
+1. [Prework](https://github.com/ikyle53/rn#Java-Prework)
 
 # Growth Mindset
 
@@ -3530,3 +3535,15 @@ Three types:
 2. Setter
 3. Interface 
 
+# Java Prework
+
+## SQL Cert
+![SQL](javaPrework.PNG)
+
+### Understanding of relational databases and SQL
+
+At first databases were scary and I wasn't sure what databases did exactly. I learned that databases are like excel sheets on steroids that store values in cells and these cells of data are then queried (asked for) and delivered to the requestor.  
+
+SQL is the language of querying (asking for) data. It comes in the form of simple statements that can ask for, update, delete, and create data. Given these 4 basic actions I can run through data in a database that holds millions of rows with less time and less effort than if I were to use Excel or something like it.  
+
+As for the relational aspect of the database; ID's are used to gain relations with other tables. One table has a unique ID and another table uses a foreign ID that is used to match rows of data. They are then combined to create related data that is useful.
