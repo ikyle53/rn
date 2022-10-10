@@ -3538,7 +3538,7 @@ Three types:
 # Java Prework
 
 ## SQL Cert
-![SQL](javaPrework.PNG)
+![SQL](javaPrework.png)
 
 ### Understanding of relational databases and SQL
 
